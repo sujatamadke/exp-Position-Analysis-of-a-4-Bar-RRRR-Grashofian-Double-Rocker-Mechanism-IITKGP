@@ -1,18 +1,14 @@
-## Introduction
-
-<div align="center">
-<img src="experiment/images/iitkgp.png" width="10%">
-</div>
-
-<b>Discipline | <b> Mechanical Engineering 
-:--|:--|
-<b> Lab | <b> **Mechanisms and Robotics Lab**
-<b> Experiment|     <b> **Position Analysis of a 4 Bar RRRR Grashofian Double Rocker Mechanism and Experiment 5**
+## References
+#### Books
+- A. K. Mallik, A. Ghosh and G. Dittrich - Kinematic Analysis and Synthesis of Mechanisms, CRC Press Inc. Boca Rato
+- A. Ghosh and A. K. Mallik - Theory of Mechanisms and Machines, Affiliated East-West Press (P) Ltd., New Delhi
+- Kenneth J. Waldron, Gary L. Kinzel - Kinematics, Dynamics And Design Of Machinery, Wiley India Pvt Ltd
+- John Joseph Uicker, G. R. Pennock, Joseph Edward Shigley - Theory of machines and mechanisms , Oxford University Press
+- Arthur G. Erdman, George N. Sandor, Sridhar Kota - Mechanism Design: Analysis And Synthesis, Prentice Hall
+- Atmaram H. Soni -Mechanism Synthesis and Analysis,, McGraw-Hill Inc.,US
 
 
-### About the Experiment 
-
-<!--Fill a brief description of this experiment here-->
+# People
 
 <b>Name of Developer | <b> **Dr. Kingshook Bhattacharyya**
 :--|:--|
@@ -28,4 +24,4 @@ SrNo | Name | VLabs Developer or Integration Engineer | Designation | Department
 1 | **Mitrajit Samanta** | Integration | Senior Project Officer | Department of Mechanical Engineering | IIT Kharagpur | 
 2 | **Pabitra Kumar Jana** | Integration | Senior Project Officer | Department of Mechanical Engineering | IIT Kharagpur | 
 3 | **Sujata Madke** | Integration | Research Engineer | Department of Mechanical Engineering | IIT Kharagpur | 
- 
+
