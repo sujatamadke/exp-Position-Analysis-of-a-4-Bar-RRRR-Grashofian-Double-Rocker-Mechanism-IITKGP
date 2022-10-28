@@ -6,7 +6,7 @@
 
 <b>Discipline | <b> Mechanical Engineering 
 :--|:--|
-<b> Lab | <b> **Mechanisms and Robotics Lab**
+<b> Lab | <b> **Kinematics and Dynamics of Mechanisms**
 <b> Experiment|     <b> **Position Analysis of a 4 Bar RRRR Grashofian Double Rocker Mechanism and Experiment 5**
 
 
