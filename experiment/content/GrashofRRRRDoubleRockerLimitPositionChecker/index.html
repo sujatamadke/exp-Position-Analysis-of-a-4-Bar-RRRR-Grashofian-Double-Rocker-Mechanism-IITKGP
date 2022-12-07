@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script language="JavaScript" type="text/javascript">
+function checkGrashof() {
+
+    var l1 = document.getElementById("ground").value;
+    var l2 = document.getElementById("crank").value;
+    var l3 = document.getElementById("coupler").value;
+    var l4 = document.getElementById("follower").value;
+    var theta21 = document.getElementById("rocker_limit_1").value;
+    var theta22 = document.getElementById("rocker_limit_2").value;
+    var theta41 = document.getElementById("rocker_limit_1").value;
+    var theta42 = document.getElementById("rocker_limit_2").value;
+       
+	var theta21_ = Math.acos(((l2+l3)*(l2+l3)+(l1*l1-l4*l4))/(2*l1*(l2+l3)))*180.0/Math.PI;
+	var theta41_ = Math.acos(((l2+l3)*(l2+l3)-(l4*l4+l1*l1))/(2*l1*l4))*180.0/Math.PI;
+	var theta22_ = Math.acos(((l2*l2+l1*l1)-(l3+l4)*(l3+l4))/(2*l1*l2))*180.0/Math.PI;
+	var theta42_ = Math.acos(((l2*l2-l1*l1)-(l3+l4)*(l3+l4))/(2*l1*(l3+l4)))*180.0/Math.PI;
+	
+       
+	err_theta21 = (Math.abs((theta21 - theta21_) / theta21_) * 100);
+	err_theta22 = (Math.abs((theta22 - theta22_) / theta22_) * 100);
+	err_theta41 = (Math.abs((theta41 - theta41_) / theta41_) * 100);
+	err_theta42 = (Math.abs((theta42 - theta42_) / theta42_) * 100);
+	document.getElementById("error_theta21").innerHTML = "Crank Limit 1 = " + theta41_ + "          ,     Error = "+err_theta21+" %";
+	document.getElementById("error_theta22").innerHTML = "Crank Limit 2 = " + theta42_ + "          ,     Error = "+err_theta22+" %";
+	document.getElementById("error_theta41").innerHTML = "Rocker Limit 1 = " + theta41_ + "          ,     Error = "+err_theta41+" %";
+	document.getElementById("error_theta42").innerHTML = "Rocker Limit 2 = " + theta42_ + "          ,     Error = "+err_theta42+" %";
+
+}
+</script>
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+.style2 {font-family: Verdana, Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+<body>
+<label></label>
+<label><span class="style1">Validate Graphical Analysis for Limits of Double Rocker</span><span class="style2"><br />
+Link Length 1 (Ground) :
+<input id="ground" type="number">
+<br />
+Link Length 2 (Crank) :
+<input type="number" id="crank" />
+<br />
+</span></label>
+<span class="style2">
+<label>Link Length 3 (Coupler) :
+<input type="number" id="coupler" />
+</label>
+<label><br />
+Link Length 4 (Follower) :
+<input type="number" id="follower" />
+</label>
+<label><br />
+Limit 1 for theta 2 (degrees):
+<input type="number" id="crank_limit_1" />
+</label>
+<label><br />
+Limit 2 for theta 2 (degrees):
+<input type="number" id="crank_limit_2" />
+</label>
+<label><br />
+Limit 1 for theta 4 (degrees):
+<input type="number" id="rocker_limit_1" />
+</label>
+<label><br />
+Limit 2 for theta 4 (degrees):
+<input type="number" id="rocker_limit_2" />
+<br />
+</label>
+<br />
+<label></label><label></label>
+<input name="submit" type="submit" id="Submit" onclick="checkGrashof()" value="Check"/>
+</span>
+<p id="error_theta21"></p>
+<p id="error_theta22"></p>
+<p id="error_theta41"></p>
+<p id="error_theta42"></p>
+</body>
+</html>
